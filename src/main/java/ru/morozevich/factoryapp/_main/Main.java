@@ -5,7 +5,6 @@ import ru.morozevich.factoryapp.entity.CatType;
 import ru.morozevich.factoryapp.service.CatFactory;
 import ru.morozevich.factoryapp.util.CatAgeComparator;
 import ru.morozevich.factoryapp.util.CatCatColorComparator;
-import ru.morozevich.factoryapp.util.CatIdComparator;
 import ru.morozevich.factoryapp.util.CatWeightComparator;
 
 import java.util.ArrayList;
