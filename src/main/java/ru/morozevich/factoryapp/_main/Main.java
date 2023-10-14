@@ -2,7 +2,7 @@ package ru.morozevich.factoryapp._main;
 
 import ru.morozevich.factoryapp.entity.Cat;
 import ru.morozevich.factoryapp.entity.CatType;
-import ru.morozevich.factoryapp.service.CatFactory;
+import ru.morozevich.factoryapp.factory.CatFactory;
 import ru.morozevich.factoryapp.util.CatAgeComparator;
 import ru.morozevich.factoryapp.util.CatCatColorComparator;
 import ru.morozevich.factoryapp.util.CatWeightComparator;

@@ -1,4 +1,4 @@
-package ru.morozevich.factoryapp.service;
+package ru.morozevich.factoryapp.factory;
 
 import ru.morozevich.factoryapp.entity.Cat;
 import ru.morozevich.factoryapp.entity.CatType;
