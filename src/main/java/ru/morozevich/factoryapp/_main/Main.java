@@ -21,7 +21,7 @@ public class Main {
             catList.add(factory.createCat(CatType.DOMESTIC));
         }
         System.out.println(catList);
-        Comparator <Cat> catComparatorColor= new CatWeightComparator().thenComparing((new CatCatColorComparator().thenComparing(new CatAgeComparator())));
+        Comparator<Cat> catComparatorColor = new CatWeightComparator().thenComparing((new CatCatColorComparator().thenComparing(new CatAgeComparator())));
         catList.sort(catComparatorColor);
         System.out.println(catList);
     }

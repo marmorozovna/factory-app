@@ -5,10 +5,11 @@ import ru.morozevich.factoryapp.service.CatCreator;
 import java.util.Random;
 
 public class Cat {
-    CatColor catColor;
-    int age;
-    int weight;
-    long id;
+    private CatColor catColor;
+    private int age;
+    private int weight;
+    private long id;
+    private static long countId;
 
     public Cat() {
         Random random = new Random();
@@ -16,18 +17,15 @@ public class Cat {
         this.catColor = catCreator.chooseCatColor();
         this.age = random.nextInt(0, 16);
         this.weight = random.nextInt(3, 11);
-        this.id = catColor.hashCode() + Integer.valueOf(age).hashCode() + Double.valueOf(weight).hashCode();
-        if (this.id<0){
-            this.id = -this.id;
-        }
+        this.id = ++countId;
     }
 
     @Override
     public String toString() {
-        return "Кошка с id: " + this.id + "; вес: " + this.weight + "; возраст: " + this.age + "; цвет: " + this.catColor+"\n";
+        return "Кошка с id: " + this.id + "; вес: " + this.weight + "; возраст: " + this.age + "; цвет: " + this.catColor + "\n";
     }
 
-    public CatColor getCatColor(){
+    public CatColor getCatColor() {
         return this.catColor;
     }
 
