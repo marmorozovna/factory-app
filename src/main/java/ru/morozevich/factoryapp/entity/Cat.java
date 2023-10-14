@@ -1,7 +1,5 @@
 package ru.morozevich.factoryapp.entity;
 
-import ru.morozevich.factoryapp.service.CatCreator;
-
 import java.util.Random;
 
 public class Cat {
@@ -11,10 +9,9 @@ public class Cat {
     private long id;
     private static long countId;
 
-    public Cat() {
+    public Cat(CatColor color) {
         Random random = new Random();
-        CatCreator catCreator = new CatCreator();
-        this.catColor = catCreator.chooseCatColor();
+        this.catColor = color;
         this.age = random.nextInt(0, 16);
         this.weight = random.nextInt(3, 11);
         this.id = ++countId;
@@ -22,7 +19,11 @@ public class Cat {
 
     @Override
     public String toString() {
-        return "Кошка с id: " + this.id + "; вес: " + this.weight + "; возраст: " + this.age + "; цвет: " + this.catColor + "\n";
+        return "Кошка с id: " + this.id
+                + "; вес: " + this.weight
+                + "; возраст: " + this.age
+                + "; цвет: "
+                + this.catColor + "\n";
     }
 
     public CatColor getCatColor() {

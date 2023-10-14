@@ -1,9 +1,8 @@
 package ru.morozevich.factoryapp.factory;
 
-import ru.morozevich.factoryapp.entity.Cat;
-import ru.morozevich.factoryapp.entity.CatType;
-import ru.morozevich.factoryapp.entity.DomesticCat;
-import ru.morozevich.factoryapp.entity.WildCat;
+import ru.morozevich.factoryapp.entity.*;
+
+import java.util.Random;
 
 public class CatFactory {
     private static CatFactory factory;
@@ -18,14 +17,22 @@ public class CatFactory {
         return factory;
     }
 
-    public Cat createCat(CatType type) {
+    public Cat createCat() {
         Cat cat = null;
-        switch (type) {
-            case WILD:
-                cat = new WildCat();
+        Random random = new Random();
+        int randonum = random.nextInt(1, 5);
+        switch (randonum) {
+            case 1:
+                cat = new WhiteCat(CatColor.WHITE);
                 break;
-            case DOMESTIC:
-                cat = new DomesticCat();
+            case 2:
+                cat = new BlackCat(CatColor.BLACK);
+                break;
+            case 3:
+                cat = new GingerCat(CatColor.GINGER);
+                break;
+            case 4:
+                cat = new Tortoiseshell(CatColor.TORTOISESHELL);
                 break;
         }
         return cat;

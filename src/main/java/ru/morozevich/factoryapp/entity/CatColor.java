@@ -6,7 +6,7 @@ public enum CatColor {
     GINGER(56),
     TORTOISESHELL(99);
 
-    int rateNum;
+    final int rateNum;
 
     CatColor(int rateNum) {
         this.rateNum = rateNum;
