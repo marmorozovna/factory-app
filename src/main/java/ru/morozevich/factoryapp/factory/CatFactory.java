@@ -20,8 +20,8 @@ public class CatFactory {
     public Cat createCat() {
         Cat cat = null;
         Random random = new Random();
-        int randonum = random.nextInt(1, 5);
-        switch (randonum) {
+        int randoNum = random.nextInt(1, 5);
+        switch (randoNum) {
             case 1:
                 cat = new WhiteCat(CatColor.WHITE);
                 break;
